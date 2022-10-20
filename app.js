@@ -1,8 +1,8 @@
-"use strict";
+
 
 // PROJECT Section
 
-class Book {
+/*class Book {
     constructor(Id, title, author, read){
      this.Id = Id;
      this.title = title;
@@ -29,13 +29,32 @@ class Library{
         }
     }
 
-    addBook () {
-        var newBook = new Book(title, author, read);
-        newData.appendChild(newBook);
-        let newRow = document.createElement('tr');
-        let newData = document.createElement('td');
-        newRow.appendChild(newData);
-        let tableBody = document.querySelector('tbody');
-        newRow.appendChild(tableBody);
+    addBook (title, author, read) {
+        let RowNumber = document.getElementById("RowNumber").value;
+        let table = document.getElementById("table");
+        let row = table.insertRow(RowNumber);
+        let title = row.insertCell(0);
+        let author = row.insertCell(1);
+        let read = row.insertCell(2)
+     
+     
+        title.innerHTML = document.getElementsByClassName('bookTitle').value;
+        author.innerHTML = document.getElementsByClassName('authorTitle').value;
+        read.innerHTML = document.getElementsByClassName('checkBox').value;
     }
-};
+};*/
+
+function addBook () {
+    let RowNumber = document.getElementById("RowNumber").value;
+    let table = document.getElementById("table");
+    let row = table.insertRow(RowNumber);
+    let title = row.insertCell(0);
+    let author = row.insertCell(1);
+    let read = row.insert
+ 
+ 
+    title.innerHTML = document.getElementById('inputtitle').value;
+    author.innerHTML = document.getElementById('inputauthor').value;
+    read.innerHTML = document.getElementById('inputread').value;
+}
+
