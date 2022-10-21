@@ -50,11 +50,18 @@ function addBook () {
     let row = table.insertRow(RowNumber);
     let title = row.insertCell(0);
     let author = row.insertCell(1);
-    let read = row.insert
- 
- 
+    let read = document.getElementById("inputread");
+    read.setAttribute('type', 'checkbox');
+    read.setAttribute('value','read');
+    read.innerHTML = row.insertCell(2).value;
+   
+
+
     title.innerHTML = document.getElementById('inputtitle').value;
     author.innerHTML = document.getElementById('inputauthor').value;
-    read.innerHTML = document.getElementById('inputread').value;
+    
+
+   
+ 
 }
 
